@@ -316,18 +316,6 @@
 
 //.....................Arguments....................................
 
-function  numbers(){
-    let args=arguments;
-    console.log(args);
-    console.log(typeof(args));
-    console.log((Array.isArray(args)));
-    
-    
-    
-}
-numbers(10,20,10,908,87)
-
-// //---------------------------------
 // function number() {
 //     let args=arguments;
 // console.log(typeof(args));
@@ -373,6 +361,153 @@ numbers(10,20,10,908,87)
 
 
 
+//..................Arrowfunction.........................
+
+// let username=()=>{
+//     console.log("hello");
+//     var add=2+2;
+//     alert(add);
+// }
+// username();
+
+
+// let user={
+//     name:"abcd",
+//     com:"xyz",
+//     loc:"blore",
+//     details:function(){
+//         console.log(` i am ${this.name} and i am at ${this.loc}`);
+//     }
+// }
+// user.details();
+
+//..................by es-6....................................
+// let user={
+//     name:"abcd",
+//     com:"xyz",
+//     loc:"blore",
+//     details:()=>{
+//         console.log(`my name is ${user.name}`);
+        
+//     }
+    
+// }
+// user.details();
+
+
+//.................................Arguments with es-6........................
+
+// let numbers=()=>{
+//     console.log(arguments);
+    
+// }
+// numbers(10,20,98,79)//error becoz arguments not work in es-6 to over come this error we use rest opperator/spread operator
+
+
+
+//......................rest operator/spread operator
+
+
+
+// let num= (...rest)=>{
+//     console.log(rest);
+//     //it is orginal array
+// }
+// num(10,20,40,50,79,17)
+
+
+
+//----------------------------------------ARRAY METHODS()---------------------------
+
+
+//...........1.forEach()
+// var lang=['html','css','angular','python','reactJs'];
+// lang.forEach(function(callback){
+//     console.log(callback);
+    
+// })
+
+
+// //by es-6
+
+// lang.forEach((value,index,range)=>{
+//     // console.log(value);
+//     // console.log(index);
+//     // console.log(range);
+    
+// })
+
+//for string
+
+
+// var str="hello namma bangalore";
+// [...str].forEach(function(callback){
+//     console.log(callback);
+    
+// })
+
+// //.............forLoop
+// //..for array
+// var lang=['html','css','angular','python','reactJs'];
+// for(let x of lang){
+//     console.log(x);
+    
+// }
+// //for string
+// var str=`hello jsp and qsp`;
+// for(let y of str){
+//     console.log(y);
+    
+// }
+
+//..............2.pop()
+// var lang=['html','css','angular','python','reactJs','java','sql','nodejs'];
+// var pop=lang.pop();
+// console.log(pop);
+// console.log(lang)
+
+// //.........3.shift()
+// var shift=lang.shift();
+// console.log(shift);
+// console.log(lang);
+
+// //....4.unshift()
+
+// var unshift=lang.unshift("firebase");
+// console.log(unshift);
+// console.log(lang);
+
+//....5.push()
+// console.log(lang.unshift("firebase"));
+
+// var push=lang.push("devops");
+// console.log(push);
+// console.log(lang);
+
+//...................5.splice
+// console.log(lang.splice(0));
+// console.log(lang.splice(0,1));
+// console.log(lang.splice(4,0,"firebase"));
+// console.log(lang);
+
+
+//......................6.fill()
+// var lang=['html','css','angular','python','reactJs'];
+
+// console.log(lang.fill("shahsi"));
+
+//......................7.Includes()...................
+
+// var lang=['html','css','angular','python','reactJs'];
+// console.log(lang.includes("css"));
+// if(console.log(lang.includes("java")))
+// {
+//     alert("if block")
+// }
+// else
+// {
+//     confirm("else block")
+// }
 
 
 
@@ -482,8 +617,83 @@ numbers(10,20,10,908,87)
 
 
 
-// //.................................
+// //.................................reverse
 // function username(name){
 //     return [...name].reverse().join('');
 // }
 // console.log(username('pavan kumar').toUpperCase());
+
+
+//......................string replace()...................
+
+// let str="hello nodeJs and nodeJs is backend";
+// let result=str.replace(/nodeJs/g,"java");// g is regular modifier
+// console.log(str);
+// console.log(result);
+
+// //..............................trim()......................................
+
+// let trimdata="                      hello bangalore                       ";
+// let data=trimdata.trim();
+// console.log(data);
+
+
+//.........................substr()..........................................
+// var str="hello java and nodejs and javascript";
+// // let test=str.substr(0,5);
+// // console.log(test);
+// let test1=str.substring(5,0);
+// console.log(test1);
+// let test2=str.length;
+// console.log(test2);
+
+//......................slice().............................................
+
+// var str="hello java and nodejs and javascript";
+// var test=str.slice(0,10);
+// console.log(test);
+// let test1=str.slice(5,0);
+// console.log(test1);//empty space
+
+
+
+//............................search().....................
+// var str="hello java and nodejs and javascript";
+//  let search=str.search("javascript");
+//  console.log(search);//6
+
+//  //..................................match()....................
+//  var str="hello javascript and nodejs and java";
+
+//  let match=str.match(/java/g);
+//  console.log(match);
+ 
+ 
+//.........................startsWith() and endswith()................................
+
+// var str="hello javascript and nodejs and java";
+// let start=str.startsWith("h");//true
+// let end=str.endsWith("a");//true
+// let start1=str.startsWith("a");//false
+// console.log(start);
+// console.log(end);
+
+// if(str.startsWith='a')//false then else block executed
+// {
+//     alert("if block")
+// }
+// else{ 
+//     alert("else block")
+// }
+
+//.....................repeat()............................
+// var str="hello javascript and nodejs and java";
+// var repeat=str.repeat(11);
+// document.write(repeat);//11 times repeat
+
+var str="hello javascript and nodejs and java";
+let test=str.split('').reverse().join('');
+console.log(test);
+
+
+
